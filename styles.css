@@ -1,0 +1,144 @@
+:root {
+  --primary-color: hsl(225, 100%, 94%);
+  --secondary-color: hsl(245, 75%, 52%);
+  --netural-color: hsl(225, 100%, 98%);
+  --desaturated-blue: hsl(224, 23%, 55%);
+  --dark-blue: hsl(223, 47%, 23%);
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-size: 16px;
+  font-family: "Red Hat Display", sans-serif;
+  background: url(./images/pattern-background-mobile.svg) no-repeat center/cover;
+  background-color: var(--primary-color);
+  height: 40vh;
+  line-height: 1.5;
+}
+
+img {
+  width: 100%;
+}
+a {
+  color: var(--secondary-color);
+  font-weight: bold;
+  font-size: 0.7rem;
+}
+
+h1,
+.primary-text {
+  font-weight: 900;
+  color: var(--dark-blue);
+
+  padding-bottom: 1rem;
+}
+p {
+  color: var(--desaturated-blue);
+  font-size: 0.7rem;
+}
+
+/* Card Component */
+
+#card .container {
+  max-width: 300px;
+  margin: auto;
+  padding: 4rem 1rem;
+}
+
+#card .content-container {
+  display: grid;
+  grid-template-columns: 1fr;
+}
+
+#card .image {
+  border-radius: 20px 20px 0 0;
+}
+
+#card .content-section {
+  background: #fff;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding: 1rem 1.4rem;
+  border-radius: 0 0 20px 20px;
+}
+
+#card .content-section > p {
+  padding-bottom: 2rem;
+  text-align: center;
+}
+#card .content-section .musicPlan {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  width: 90%;
+  padding: 0.7rem;
+  border-radius: 20px;
+  background: var(--netural-color);
+}
+#card .content-section .musicPlan > img {
+  width: 40px;
+}
+
+#card .content-section .btn {
+  width: 90%;
+  padding: 0.6rem 0;
+  border-radius: 8px;
+  border-style: none;
+  font-weight: bold;
+  text-align: center;
+  text-decoration: none;
+}
+#card .content-section .btn-1 {
+  background: var(--secondary-color);
+  color: var(--netural-color);
+  margin-top: 1.3rem;
+
+  -webkit-box-shadow: 0px 6px 10px -6px var(--desaturated-blue);
+  -moz-box-shadow: 0 10px 10px -6px var(--desaturated-blue);
+  box-shadow: 0 15px 10px -6px var(--desaturated-blue);
+}
+
+#card .content-section .btn-2 {
+  background: none;
+  color: var(--desaturated-blue);
+  margin-top: 0.3rem;
+  font-weight: bold;
+}
+
+#card .content-section .btn-1:hover,
+a:hover {
+  text-decoration: none;
+  opacity: 0.7;
+}
+
+#card .content-section .btn-2:hover {
+  color: var(--dark-blue);
+}
+
+.attribution {
+  color: (--dark-blue);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding-bottom: 5rem;
+}
+.attribution a {
+  text-decoration: none;
+  color: var(--secondary-color);
+}
+
+@media (min-width: 768px) {
+  body {
+    background: url(./images/pattern-background-desktop.svg) no-repeat
+      center/cover;
+    height: 30vh;
+    background-color: var(--primary-color);
+  }
+}
