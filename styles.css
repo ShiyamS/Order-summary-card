@@ -19,6 +19,7 @@ body {
   background-color: var(--primary-color);
   height: 40vh;
   line-height: 1.5;
+  overflow: hidden;
 }
 
 img {
